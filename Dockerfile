@@ -1,9 +1,7 @@
 FROM registry.access.redhat.com/ubi7/nodejs-14 as builder
 USER root
-COPY upload/src /tmp/src
-RUN chown -R 1001:0 /tmp/src
+RUN chown -R 1001:0 /app
 USER 1001
-RUN /usr/libexec/s2i/assemble
 RUN mkdir /app
 WORKDIR /app
 COPY package*.json /app
