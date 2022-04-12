@@ -1,8 +1,8 @@
 FROM registry.access.redhat.com/ubi7/nodejs-14 as builder
 USER root
+RUN mkdir /app
 RUN chown -R 1001:0 /app
 USER 1001
-RUN mkdir /app
 WORKDIR /app
 COPY package*.json /app
 RUN npm install
