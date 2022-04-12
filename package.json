@@ -8,13 +8,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "start": "npm run build"
+    "start": "NODE_ENV=production npm run build"
   },
   "dependencies": {
-    "axios": "^0.26.1",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@tsconfig/svelte": "^2.0.1",
     "autoprefixer": "^10.4.4",
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
     "postcss": "^8.4.12",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.7",
