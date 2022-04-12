@@ -1,4 +1,5 @@
 FROM registry.access.redhat.com/ubi7/nodejs-14 as builder
+USER root
 WORKDIR /
 COPY package*.json /
 RUN npm install
