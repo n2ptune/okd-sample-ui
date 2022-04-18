@@ -1,5 +1,7 @@
 import axios from "axios"
 
+axios.defaults.baseURL = 'http://okd-server-test-okd-test.apps.lab.okd.local'
+
 console.log(process.env.API_URL)
 
 export const write = (context: any) => {
